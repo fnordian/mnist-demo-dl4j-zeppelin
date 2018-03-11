@@ -4,7 +4,7 @@ set -e
 
 /zeppelin/bin/zeppelin.sh &
 ZEPPID=$!
-sleep 10
+sleep 20
 curl -d@/mnistdemo-notebook.json http://localhost:8080/api/notebook/import
 sleep 1
 kill $ZEPPID
